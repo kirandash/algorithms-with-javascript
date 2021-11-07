@@ -94,3 +94,48 @@
 - push and shift is O(1)
 - Unshift is O(n) - because after taking out first item, all the elements will have to readjust their position
 
+## 3. Optimization with Caching
+### 3.1 Faster Algorithms - Unique array
+- Ex: create a fn to check if an array is unique or not
+    - O(n^2) with multiple loops
+    - O(n) with breadcrumb approach (Store array item as indexes in breadcrumb object)
+
+### 3.2 Unique Sort exercise
+- we are creating a new array. So this is a trade off with space complexity
+- we could think of improving this by using only one array
+- O(n)
+
+### 3.3 Caching with memoization
+- Caching: Saving value into an object or array
+- **Memoization**: Caching the value that a function returns
+```
+const factorial = (n) => {
+    // Calculations: n * (n-1) * (n-2) * ... (2) * (1)
+    return factorial;
+}
+
+factorial(35);
+
+factorial(36); // factorial(36) = factorial(35) * 36;
+```
+
+### 3.4 Basic Memoization exercies
+- if key in cache return cache
+- else run the fn and save it in cache
+- this solution has cache object in global scope
+
+### 3.5 Memization with Closure
+- We will use closure to clean up global variable
+- **closure**: fn that returns another fn
+    - allows us to create private variables
+    - fn is created once
+    - called multiple times
+
+### 3.6 Generic Memoize Function
+- Make our memo function generic and accept the times10 function as a callback rather than defining the n * 10 logic inside the if/else or pulling it in from the global scope.
+- Take advantage of the fact that parameters are saved in the closure as well, just like the cache from the previous example.
+
+### 3.7 Reviewing Optimization
+- Note: Optimizing doesn't improve time complexity in the above examples. So they are all O(1)
+- But it will help us if the calculation is heavy and resource consuming
+- In JS: a hash table is basically an object. So optimizing with hash table means saving data in object
