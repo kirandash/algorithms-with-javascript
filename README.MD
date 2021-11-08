@@ -139,3 +139,29 @@ factorial(36); // factorial(36) = factorial(35) * 36;
 - Note: Optimizing doesn't improve time complexity in the above examples. So they are all O(1)
 - But it will help us if the calculation is heavy and resource consuming
 - In JS: a hash table is basically an object. So optimizing with hash table means saving data in object
+
+## 4 Recursion
+
+### 4.1 Introducing Recursion
+- Recursion is simply when a function calls itself; however it doesn't stop there.
+- WHY RECURSION?
+    - 
+    ```
+    var callMe = function() {
+        callMe();
+        callMe();
+        callMe("anytime");
+    };
+    ```
+    - Elegant solutions to keep your code D.R.Y.
+    - Expected CS knowledge
+
+### 4.2 Call stack walkthrough
+1. Push called Fn on stack.
+2. Execute Fn body.
+    - until...
+        - ... another fn is called:
+        -  Pause the current execution and start at step 1.
+    - ... a return is hit:
+        - Pop the current Fn off the stack.
+        - Resume executing the previous Fn.
