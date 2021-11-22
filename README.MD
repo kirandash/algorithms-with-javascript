@@ -190,3 +190,9 @@ factorial(36); // factorial(36) = factorial(35) * 36;
     - ES6 offers TCO, which allows some functions to be called without growing the call stack.
     - https://262.ecma-international.org/6.0/#sec-tail-position-calls
     - https://2ality.com/2015/06/tail-call-optimization.html
+
+### 4.4 Wrapper Functions
+- **COMMON PATTERNS FOR RECURSION**
+    - Wrapper Functions
+    - Accumulators
+
