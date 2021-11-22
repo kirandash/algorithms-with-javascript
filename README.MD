@@ -196,3 +196,5 @@ factorial(36); // factorial(36) = factorial(35) * 36;
     - Wrapper Functions
     - Accumulators
 
+### 4.5 Accumulators
+
