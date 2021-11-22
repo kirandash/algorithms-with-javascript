@@ -165,3 +165,28 @@ factorial(36); // factorial(36) = factorial(35) * 36;
     - ... a return is hit:
         - Pop the current Fn off the stack.
         - Resume executing the previous Fn.
+
+### 4.3 Looping with Recursion
+- Recursion in 4 steps:
+    - Identify base case(s).
+    - Identify recursive case(s).
+    - Return where appropriate.
+    - Write procedures for each case that bring you closer to the base case(s).
+- 
+    ```
+    var callMyself = function() {
+        if() {
+            // base case
+            return;
+        } else {
+            // recursive case
+            callMyself();
+        }
+            
+        return;
+    };
+- Recursion can always be implemented as a loop, but in some situations, believe it or not, it is simpler to use recursion
+- **Tail-Call Optimization**: 
+    - ES6 offers TCO, which allows some functions to be called without growing the call stack.
+    - https://262.ecma-international.org/6.0/#sec-tail-position-calls
+    - https://2ality.com/2015/06/tail-call-optimization.html
