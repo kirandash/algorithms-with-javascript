@@ -198,3 +198,4 @@ factorial(36); // factorial(36) = factorial(35) * 36;
 
 ### 4.5 Accumulators
 
+### 4.6 Exercise - Convert Recusrion to Loop
