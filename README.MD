@@ -214,3 +214,11 @@ factorial(36); // factorial(36) = factorial(35) * 36;
 ### 5.2 Implement Linear Search
 - Find position of an item in array
 - edge cases: if more than one occurences then wheher to return the first occurence or the last occurence
+
+### 5.3 Binary Search
+- set initial min and max at start and end of array
+- start guess from center
+- if val at guess matches item, return index
+- if val at guess is less than item move min next to guess
+- if val at guess is higher than item move max before guess
+- return -1 if no found
