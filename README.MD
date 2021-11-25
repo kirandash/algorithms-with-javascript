@@ -203,3 +203,14 @@ factorial(36); // factorial(36) = factorial(35) * 36;
 ### 4.7 Recursive Factorial & Memoize Exercise
 - Do factorial recursively and memoize each result
 - memoze + factorial
+
+## 5 Divide and Conquer
+### 5.1 Intro
+- Binary Search:
+    -  Search for a value in a **sorted array** by cutting the side of the search area in half.
+- Linear Search:
+    - Search for a value in an array by checking each value in order.
+
+### 5.2 Implement Linear Search
+- Find position of an item in array
+- edge cases: if more than one occurences then wheher to return the first occurence or the last occurence
