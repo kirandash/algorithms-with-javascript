@@ -317,3 +317,7 @@ factorial(36); // factorial(36) = factorial(35) * 36;
     - run through the loops till there is a swap. If one of the loop has no swap then short circuit and exit out of the loop
     - the naive solution keeps running even if one of the loop has no swap
 - **Note**: Bubble sort is good for almost sorted list but not so good for reverse ordered list.
+
+### 5.8 MergeSort exercise
+- Split the array into halves and merge them recursively
+- compare the arrays item by item and return the concatenated result
