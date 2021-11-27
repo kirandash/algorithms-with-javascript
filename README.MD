@@ -222,3 +222,98 @@ factorial(36); // factorial(36) = factorial(35) * 36;
 - if val at guess is less than item move min next to guess
 - if val at guess is higher than item move max before guess
 - return -1 if no found
+
+### 5.4 Divide and Conquer Review
+- Recursive calls to a subset of the problem
+0. Recognize base case
+1. Divide: Break problem down during each call
+2. Conquer: Do work on each subset
+3. Combine: Solutions
+
+### 5.5 Sorting Types
+- Types
+    - **Comparison** Sorts
+        - **Naive** Sorts:
+            - Keep looping and comparing values until the list is sorted
+            - **Bubble** Sort
+                - Loop through an array, comparing adjacent indices and swapping the greater value to the end
+                - O(n)
+            - **Insertion** Sort
+                - Find the smallest value in main array and push it to new array. keep doing till main array is empty
+            - **Selection** Sort
+        - **Divide & Conquer** Sorts
+            - Recursively divide lists and sort smaller parts of list until entire list is sorted
+            - **Mergesort**
+                - Recursively merge sorted sub-lists.
+                - nlog(n)
+            - **Quiksort**
+    - **Noncomparison** sorts
+
+### 5.6 Merge Sort
+- The merge step takes two sorted lists and merges them into 1 sorted list.
+- **Psuedocode**:
+    - `merge(L,R)`
+    - `[3, 9, 10, 27]`  ---> `[3, 9]` and `[10, 27]`
+    - initialize the empty array `[]`
+    - compare the first index of the left array to the first index of the right array
+    - push the lower value to empty array
+    - shift the array with the lower value
+    - repeat until both arrays are empty
+- **Step 1**:
+    - Divide input array into 'n' single element subarrays
+- **Step 2**:
+    - Repeatedly merge subarrays and sort on each merge
+
+### 5.7 Merge Sort Walkthrough
+- **Pseudocode: Merge Sort**
+    - ```
+        mergeSort(list)
+            base case: if list.length < 2 return
+            break the list into halves L & R
+            Lsorted = mergeSort(L) // recursing on left side
+            Rsorted = mergeSort(R) // recursing on right side
+            return merge(Lsorted, Rsorted)
+- **Pseudocode: Merge**
+    - ```
+        mergeSort(list)
+            initialize n to the length of the list
+
+            base case is if n < 2, just return
+
+            initialize mid to n/2
+
+            left = left slice of array to mid - 1
+
+            right = right slice of array mid to n - 1
+
+            mergeSort(left)
+            mergeSort(right)
+
+            merge(left, right)
+- **Simplified Analysis**:
+    - ```
+        mergeSort(list)
+            initialize n to the length of the list // O(1)
+
+            base case is if n < 2, just return
+
+            initialize mid to n/2
+
+            left = left slice of array to mid - 1
+
+            right = right slice of array mid to n - 1
+
+            mergeSort(left) // dividing so n/2 or O(logn)
+
+            mergeSort(right) // dividing so n/2 or O(logn)
+
+            merge(left, right, a) // O(n)
+- O(nlogn)
+
+### 5.7 Bubblesort Exercise
+- Naive sol: 
+    - run through the loop twice and swap items
+- Best sol:
+    - run through the loops till there is a swap. If one of the loop has no swap then short circuit and exit out of the loop
+    - the naive solution keeps running even if one of the loop has no swap
+- **Note**: Bubble sort is good for almost sorted list but not so good for reverse ordered list.
