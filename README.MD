@@ -321,3 +321,14 @@ factorial(36); // factorial(36) = factorial(35) * 36;
 ### 5.8 MergeSort exercise
 - Split the array into halves and merge them recursively
 - compare the arrays item by item and return the concatenated result
+
+## 6 Greedy Algorithms
+### 6.1 Introducing Greedy
+- Greedy algorithms always make the locally optimal choice!
+
+### 6.2 Greedy Algorithm exercise
+- The coins problem
+
+### 6.3 Brute Force
+- Brute Force Approach:
+    - Calculate every single combination possible and keep track of the minimum
