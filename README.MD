@@ -332,3 +332,21 @@ factorial(36); // factorial(36) = factorial(35) * 36;
 ### 6.3 Brute Force
 - Brute Force Approach:
     - Calculate every single combination possible and keep track of the minimum
+
+## 7 Dynamic Programming
+### 7.1 Intro
+- Mostly asked by Google (tough to solve in less time)
+- Dynamic Approach: Cache values to avoid repeated calculations
+- DP Qualities:
+    - Optimal Substructure (tends to be recursive)
+    - Overlapping Subproblems
+- DP vs Divide & Conquer
+    - DP Approaches: Top Down (recursive) vs Bottom Up (iterative)
+
+### 7.2 Memoization with Recursion
+
+### 7.3 More guides and courses
+- princeton
+- MIT
+- CS50 Harvard
+- geeksforgeeks
