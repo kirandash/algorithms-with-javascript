@@ -4,6 +4,12 @@
 //input: [1,5,2,1] => output: [1,2,5]
 //input: [4,2,2,3,2,2,2] => output: [2,3,4]
 
+
+/*
+Breadcrumb Approach with additional array
+TC: O(n)
+SC: O(2n)
+*/
 const uniqSort = function(arr) {
     const breadcrumbs = {};
     var result = []; // Note: we are creating a new array. So this is a trade off with space complexity
@@ -21,3 +27,20 @@ const uniqSort = function(arr) {
 };
 
 uniqSort([4,2,2,3,2,2,2]); // => [2,3,4]
+
+/*
+Breadcrumb Approach with Object.entries
+TC: O(n)
+SC: O(n)
+*/
+const uniqSort2 = function(arr) {
+    const breadcrumbs = {};
+    for(let i = 0; i < arr.length; i++){
+      breadcrumbs[arr[i]] = true;
+    }
+    arr = Object.keys(breadcrumbs);
+    
+    return arr.sort((a, b) => a - b);
+  };
+  
+  console.log(uniqSort2([4,2,2,3,2,2,2])); // => [2,3,4]
